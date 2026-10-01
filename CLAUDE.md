@@ -1,0 +1,2 @@
+- Index.html (+ Home.jsx React/Tailwind export) is the single landing page. Build every new request as a section inside it, unless the user explicitly asks for a new page.
+- Section order: append every new section at the very END of the Home page (after all existing sections), unless the user says otherwise.

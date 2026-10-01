@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet"><style>@keyframes ddIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}html{scroll-behavior:smooth}body{margin:0;background:#F8F7F4}a{color:#fff;text-decoration:none}a:hover{color:#C7D2FE}</style></helmet>
+<header data-reveal="nav" style="position:fixed;z-index:100;top:{{ nb.top }};left:{{ nb.side }};right:{{ nb.side }};border-radius:{{ nb.radius }};box-shadow:{{ nb.shadow }};border-bottom:{{ nb.border }};background:{{ nb.bg }};backdrop-filter:{{ nb.blur }};-webkit-backdrop-filter:{{ nb.blur }};transition:all .5s ease-in-out;font-family:'Plus Jakarta Sans',system-ui,sans-serif">
+<div style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,3vw,32px);height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+<a href="#" aria-label="MNNJ Exterior Property Care home" style="display:flex"><span style="position:relative;display:block"><img src="assets/logo-light.png" alt="MNNJ Exterior Property Care" style="height:clamp(40px,4vw,48px);width:auto;object-fit:contain;display:block;transition:opacity .3s;opacity:{{ nb.lightOp }}"></img><img src="assets/logo-dark.png" alt="" aria-hidden="true" style="position:absolute;inset:0;height:100%;width:auto;object-fit:contain;display:block;transition:opacity .3s;opacity:{{ nb.darkOp }}"></img></span></a>
+<nav style="display:flex;gap:32px;align-items:center;flex-wrap:wrap"><a href="#services" style="font-size:14px;font-weight:500;color:{{ nb.link }};transition:color .3s" style-hover="color:{{ nb.linkHover }}">Services</a><a href="#why" style="font-size:14px;font-weight:500;color:{{ nb.link }};transition:color .3s" style-hover="color:{{ nb.linkHover }}">Why Us</a><a href="#testimonials" style="font-size:14px;font-weight:500;color:{{ nb.link }};transition:color .3s" style-hover="color:{{ nb.linkHover }}">Testimonials</a><a href="#about" style="font-size:14px;font-weight:500;color:{{ nb.link }};transition:color .3s" style-hover="color:{{ nb.linkHover }}">About</a></nav>
+<a href="#contact" style="display:inline-flex;align-items:center;gap:6px;height:42px;padding:0 24px;border-radius:999px;background:#1E3A8A;color:#fff;font-weight:500;font-size:14px" style-hover="background:#1E40AF;color:#fff" onMouseEnter="{{ h.nav.on }}" onMouseLeave="{{ h.nav.off }}"><span style="display:block;height:20px;overflow:hidden"><span style="display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.7,0,.2,1);transform:{{ h.nav.t }}"><span style="height:20px;display:flex;align-items:center;justify-content:center;gap:6px">Get a Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span><span style="height:20px;display:flex;align-items:center;justify-content:center;gap:6px">Get a Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span></span></span></a>
+</div>
+</header>
+<div style="min-height:100vh;padding:8px;box-sizing:border-box;display:flex;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#fff">
+<div style="position:relative;flex:1;border-radius:16px;overflow:hidden;background:#0F172A;display:flex;flex-direction:column">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=2000&q=80" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center;transform:scaleX(-1)"></img>
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,22,48,.94) 0%,rgba(12,22,48,.82) 35%,rgba(12,22,48,.45) 65%,rgba(12,22,48,.6) 100%)"></div>
+<div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px;padding:128px clamp(20px,6vw,96px) 56px">
+<h1 data-reveal="text" style="margin:0;font-size:clamp(44px,5.4vw,84px);font-weight:800;line-height:1;letter-spacing:-0.04em"><span data-w="1" style="display:inline-block">Trusted</span> <span data-w="1" style="display:inline-block">cleaning</span><br><span data-w="1" style="display:inline-block">exceptional</span><br><span data-w="1" style="display:inline-block">results</span></h1>
+<p style="margin:0;max-width:440px;font-size:17px;line-height:1.6;color:#E2E8F0;text-wrap:pretty">Experience dependable cleaning services that leave every room fresh, spotless, healthier, and ready for you to enjoy daily.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a data-reveal="pop" data-reveal-delay="0.5" href="#" style="display:inline-flex;align-items:center;gap:8px;height:54px;padding:0 28px;justify-content:center;min-width:210px;box-sizing:border-box;border-radius:999px;background:#1E3A8A;font-weight:700;font-size:15px;box-shadow:0 8px 24px rgba(30,58,138,.4)" style-hover="background:#2547A8;color:#fff" onMouseEnter="{{ h.cta.on }}" onMouseLeave="{{ h.cta.off }}"><span style="display:block;height:20px;overflow:hidden"><span style="display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.7,0,.2,1);transform:{{ h.cta.t }}"><span style="height:20px;display:flex;align-items:center;justify-content:center;gap:8px">Get a Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span><span style="height:20px;display:flex;align-items:center;justify-content:center;gap:8px">Get a Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span></span></span></a>
+<a data-reveal="pop" data-reveal-delay="0.62" href="tel:4695550123" style="display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 28px;justify-content:center;min-width:210px;box-sizing:border-box;border-radius:999px;background:#fff;color:#0F1E3D;font-weight:700;font-size:15px;box-shadow:0 8px 24px rgba(0,0,0,.18)" style-hover="color:#1E3A8A" onMouseEnter="{{ h.phone.on }}" onMouseLeave="{{ h.phone.off }}"><span style="display:block;height:20px;overflow:hidden"><span style="display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.7,0,.2,1);transform:{{ h.phone.t }}"><span style="height:20px;display:flex;align-items:center;justify-content:center;gap:12px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(469) 555-0123</span><span style="height:20px;display:flex;align-items:center;justify-content:center;gap:12px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>(469) 555-0123</span></span></span></a>
+</div>
+<div data-reveal="up" data-reveal-delay="0.8" style="margin-top:24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+<div style="display:flex;align-items:center"><img src="https://i.pravatar.cc/96?img=12" alt="" style="width:40px;height:40px;border-radius:999px;border:2px solid #fff;object-fit:cover;"></img><img src="https://i.pravatar.cc/96?img=33" alt="" style="width:40px;height:40px;border-radius:999px;border:2px solid #fff;object-fit:cover;margin-left:-10px"></img><img src="https://i.pravatar.cc/96?img=47" alt="" style="width:40px;height:40px;border-radius:999px;border:2px solid #fff;object-fit:cover;margin-left:-10px"></img>
+<div style="margin-left:-8px;height:44px;padding:0 18px 0 14px;border-radius:999px;background:#fff;display:flex;align-items:center;gap:8px;color:#0F1E3D;box-shadow:0 4px 14px rgba(0,0,0,.15)"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"></path><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"></path><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"></path><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A300" stroke="#F5A300" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><span style="font-weight:700;font-size:19px;letter-spacing:-0.01em">5.0</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;line-height:1.2">
+<span style="font-size:16px;font-weight:500;color:#fff">500+ Real Customer Reviews</span>
+<a href="#" style="align-self:flex-start;font-size:16px;font-weight:500;color:#fff;padding-bottom:4px;border-bottom:1px solid #fff" style-hover="color:#C7D2FE;border-color:#C7D2FE">See all reviews</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="why" style="scroll-margin-top:88px;background:#F8F7F4;padding:0 clamp(16px,4vw,56px);font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1917">
+<div style="position:relative;max-width:1280px;margin:0 auto;padding:96px 0;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+<div data-reveal-stagger="1" style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;padding-bottom:128px">
+<div style="display:flex;flex-direction:column;gap:20px;padding-bottom:40px">
+<span style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#1E3A8A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>Why Choose Us</span>
+<h2 data-reveal="text" style="margin:0;font-size:clamp(40px,4.8vw,68px);line-height:1.02;letter-spacing:-0.04em;font-weight:800;color:#1C1917;text-wrap:balance"><span data-w="1" style="display:inline-block">Cleaning</span> <span data-w="1" style="display:inline-block">You</span> <span data-w="1" style="display:inline-block">Can</span> <span data-w="1" style="display:inline-block">Trust,</span><br><span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.1em;color:#1E3A8A"><span data-w="1" style="display:inline-block">Every</span> <span data-w="1" style="display:inline-block">Time.</span></span></h2>
+</div>
+<div style="position:sticky;top:128px;z-index:10;background:#F8F7F4;border:1px solid #E7E5E4;border-radius:24px;padding:32px;margin-bottom:24px">
+<div style="display:flex;gap:20px;align-items:flex-start">
+<span style="flex:none;width:52px;height:52px;border-radius:14px;background:#E8EDF7;display:grid;place-items:center;font-size:20px;font-weight:800;color:#1E3A8A">1</span>
+<div style="display:flex;flex-direction:column;gap:8px;padding-top:4px"><h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.02em;color:#1C1917">Experienced Professionals</h3><p style="margin:0;max-width:460px;font-size:16px;line-height:1.6;color:#57534E;text-wrap:pretty">Our trained cleaning team knows how to handle every space with care, precision, and attention to detail.</p></div>
+</div>
+</div>
+<div style="position:sticky;top:160px;z-index:20;background:#F8F7F4;border:1px solid #E7E5E4;border-radius:24px;padding:32px;margin-bottom:24px">
+<div style="display:flex;gap:20px;align-items:flex-start">
+<span style="flex:none;width:52px;height:52px;border-radius:14px;background:#E8EDF7;display:grid;place-items:center;font-size:20px;font-weight:800;color:#1E3A8A">2</span>
+<div style="display:flex;flex-direction:column;gap:8px;padding-top:4px"><h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.02em;color:#1C1917">Reliable &amp; On Time</h3><p style="margin:0;max-width:460px;font-size:16px;line-height:1.6;color:#57534E;text-wrap:pretty">We respect your schedule and deliver dependable cleaning services when you need them.</p></div>
+</div>
+</div>
+<div style="position:sticky;top:192px;z-index:30;background:#F8F7F4;border:1px solid #E7E5E4;border-radius:24px;padding:32px;margin-bottom:24px">
+<div style="display:flex;gap:20px;align-items:flex-start">
+<span style="flex:none;width:52px;height:52px;border-radius:14px;background:#E8EDF7;display:grid;place-items:center;font-size:20px;font-weight:800;color:#1E3A8A">3</span>
+<div style="display:flex;flex-direction:column;gap:8px;padding-top:4px"><h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.02em;color:#1C1917">Safe Cleaning Products</h3><p style="margin:0;max-width:460px;font-size:16px;line-height:1.6;color:#57534E;text-wrap:pretty">We use carefully selected products and professional methods to keep your space fresh, clean, and comfortable.</p></div>
+</div>
+</div>
+<div style="position:sticky;top:224px;z-index:40;background:#F8F7F4;border:1px solid #E7E5E4;border-radius:24px;padding:32px;margin-bottom:24px">
+<div style="display:flex;gap:20px;align-items:flex-start">
+<span style="flex:none;width:52px;height:52px;border-radius:14px;background:#E8EDF7;display:grid;place-items:center;font-size:20px;font-weight:800;color:#1E3A8A">4</span>
+<div style="display:flex;flex-direction:column;gap:8px;padding-top:4px"><h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.02em;color:#1C1917">100% Satisfaction</h3><p style="margin:0;max-width:460px;font-size:16px;line-height:1.6;color:#57534E;text-wrap:pretty">Your satisfaction comes first. We go the extra mile to make sure every clean meets your expectations.</p></div>
+</div>
+</div>
+</div>
+<div style="flex:1 1 460px;min-width:0;position:sticky;top:128px;height:600px;border-radius:24px;overflow:hidden;background:repeating-linear-gradient(135deg,#EEF0F4 0 10px,#E6E9EF 10px 20px);display:grid;place-items:center"><img data-reveal="scale" src="https://images.unsplash.com/photo-1642505172378-a6f5e5b15580?auto=format&fit=crop&w=1600&q=80" alt="Professional cleaner wiping down a bright kitchen counter" style="width:100%;height:100%;object-fit:cover;display:block"></img></div>
+</div>
+</section>
+
+
+
+<section id="services" style="scroll-margin-top:88px;background:#0F172A;border-radius:4rem 4rem 0 0;padding:clamp(80px,8vw,120px) clamp(16px,4vw,56px) clamp(64px,8vw,112px);font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#0F1E3D">
+<div style="display:flex;justify-content:center;margin-bottom:16px"><span style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#BFDBFE"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Our Services</span></div>
+<h2 data-reveal="text" style="margin:0 auto clamp(40px,5vw,72px);max-width:900px;text-align:center;font-size:clamp(36px,4.6vw,68px);line-height:1.05;letter-spacing:-0.035em;font-weight:800;color:#fff;text-wrap:balance"><span data-w="1" style="display:inline-block">Expert</span> <span data-w="1" style="display:inline-block">cleaning</span> <span data-w="1" style="display:inline-block">for</span><br><span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.12em;color:#BFDBFE"><span data-w="1" style="display:inline-block">beautiful</span> <span data-w="1" style="display:inline-block">properties</span></span></h2>
+<div data-reveal-stagger="1" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:24px;max-width:1400px;margin:0 auto">
+<sc-for list="{{ items }}" as="s" hint-placeholder-count="8">
+<a href="#" onMouseEnter="{{ s.on }}" onMouseLeave="{{ s.off }}" style="display:flex;flex-direction:column;gap:20px;padding:16px;border-radius:2rem;background:#fff;color:#0F1E3D;box-shadow:0 1px 2px rgba(15,30,61,.06);transition:box-shadow .4s" style-hover="box-shadow:0 10px 30px rgba(15,30,61,.1);color:#0F1E3D">
+<div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(135deg,#EEF0F4 0 10px,#E6E9EF 10px 20px)">
+<div role="img" aria-label="{{ s.title }}" style="width:100%;height:100%;background-size:cover;background-position:center;background-image:{{ s.bg }};transition:transform .7s ease-out;transform:{{ s.imgT }}"></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;flex:1;padding:0 4px 18px;border-bottom:1px solid #ECEAE4">
+<h3 style="margin:0;font-size:20px;font-weight:700;letter-spacing:-0.015em;color:#0F1E3D">{{ s.title }}</h3>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#6B7280;text-wrap:pretty">{{ s.desc }}</p>
+</div>
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:0 4px 4px">
+<span style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#1E3A8A">Read More
+<span style="position:relative;width:18px;height:18px;overflow:hidden;display:inline-block">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;inset:0;transition:transform .3s;transform:{{ s.a1 }}"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;inset:0;transition:transform .3s;transform:{{ s.a2 }}"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+</span></span>
+<span style="display:flex;flex-direction:column;align-items:flex-end;line-height:1.1"><span style="font-size:11px;color:#6B7280;letter-spacing:0.02em">Starting at</span><span style="font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#0F1E3D">{{ s.price }}</span></span>
+</div>
+</a>
+</sc-for>
+</div>
+</section>
+<section style="background:#F8F7F4;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1917">
+<div style="max-width:1280px;margin:0 auto;padding:80px 24px 40px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<span style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#1E3A8A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg>Cleaning Result</span>
+<h2 data-reveal="text" style="margin:0;font-size:clamp(40px,4.8vw,68px);line-height:1.02;letter-spacing:-0.04em;font-weight:800;color:#1C1917"><span data-w="1" style="display:inline-block">See</span> <span data-w="1" style="display:inline-block">the</span> <span data-w="1" style="display:inline-block">Difference.</span><br><span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.12em;color:#1E3A8A"><span data-w="1" style="display:inline-block">Feel</span> <span data-w="1" style="display:inline-block">the</span> <span data-w="1" style="display:inline-block">Freshness.</span></span></h2>
+</div>
+<a href="#" onMouseEnter="{{ h.ba.on }}" onMouseLeave="{{ h.ba.off }}" style="display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 26px;border-radius:999px;background:#1E3A8A;color:#fff;font-weight:700;font-size:15px" style-hover="background:#2547A8;color:#fff"><span style="display:block;height:20px;overflow:hidden"><span style="display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.7,0,.2,1);transform:{{ h.ba.t }}"><span style="height:20px;display:flex;align-items:center;gap:8px">Get a Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span><span style="height:20px;display:flex;align-items:center;gap:8px">Get a Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span></span></span></a>
+</div>
+<div style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,3vw,32px) 96px">
+<div data-reveal="scale" style="position:relative;width:100%;height:clamp(500px,46vw,600px);border-radius:2.5rem;overflow:hidden;box-shadow:0 25px 50px -12px rgba(15,23,42,.3);user-select:none">
+<img src="https://images.unsplash.com/photo-1758448511322-8bfc73daf606?auto=format&fit=crop&w=2400&q=80" alt="Spotless living room after cleaning" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img>
+<div style="position:absolute;inset:0;z-index:10;clip-path:{{ ba.clip }}">
+<img src="https://images.unsplash.com/photo-1758448511322-8bfc73daf606?auto=format&fit=crop&w=2400&q=80" alt="Same living room before cleaning" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(.6) saturate(.55) brightness(.68) contrast(1.15)"></img>
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 75%,rgba(70,48,20,.45),transparent 45%),radial-gradient(ellipse at 65% 85%,rgba(60,40,15,.4),transparent 40%),radial-gradient(ellipse at 50% 20%,rgba(90,80,60,.3),transparent 55%)"></div>
+<span style="position:absolute;top:24px;left:24px;z-index:25;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.92);color:#0F1E3D;font-size:13px;font-weight:700;letter-spacing:0.04em;pointer-events:none">BEFORE</span>
+</div>
+<span style="position:absolute;top:24px;right:24px;z-index:25;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.92);color:#0F1E3D;font-size:13px;font-weight:700;letter-spacing:0.04em;pointer-events:none">AFTER</span>
+<div style="position:absolute;top:0;bottom:0;left:{{ ba.left }};width:4px;margin-left:-2px;background:#fff;z-index:20;pointer-events:none">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:999px;background:#fff;border:1px solid #E7E5E4;box-shadow:0 10px 30px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;color:#0F1E3D;z-index:30">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+</div>
+</div>
+<input type="range" min="0" max="100" value="{{ ba.pos }}" onChange="{{ ba.set }}" onInput="{{ ba.set }}" aria-label="Before and after comparison" style="position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;z-index:40;cursor:ew-resize"></input>
+</div>
+</div>
+</section>
+<section style="position:relative;width:100%;min-height:clamp(500px,46vw,600px);margin-top:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(96px,10vw,128px) 0;overflow:hidden;background:#172554;font-family:'Plus Jakarta Sans',system-ui,sans-serif">
+<img data-reveal="scale" src="https://images.unsplash.com/photo-1782594700873-bbeefef37e11?auto=format&fit=crop&w=2400&q=80" alt="Pristine home exterior with a clean winding driveway" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img>
+<div style="position:absolute;inset:0;background:rgba(23,37,84,.75)"></div>
+<div style="position:relative;z-index:10;max-width:768px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;align-items:center">
+<span style="display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#BFDBFE"><span style="display:flex;color:#93C5FD"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg></span>Ready to transform your home?</span>
+<h2 data-reveal="text" style="margin:0;font-size:clamp(36px,5vw,64px);line-height:1.05;letter-spacing:-0.04em;font-weight:800;color:#fff;text-wrap:balance"><span data-w="1" style="display:inline-block">Book</span> <span data-w="1" style="display:inline-block">your</span> <span data-w="1" style="display:inline-block">expert</span> <span data-w="1" style="display:inline-block">cleaning</span><br><span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.12em;color:#93C5FD"><span data-w="1" style="display:inline-block">today.</span></span></h2>
+<p style="margin:24px 0 40px;max-width:672px;font-size:18px;line-height:1.6;color:#DBEAFE;text-wrap:pretty">Experience dependable, detail-focused exterior cleaning that leaves every surface spotless and ready for you to enjoy.</p>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px">
+<a href="#" onMouseEnter="{{ h.cq.on }}" onMouseLeave="{{ h.cq.off }}" style="display:inline-flex;align-items:center;justify-content:center;min-width:220px;height:56px;padding:0 32px;box-sizing:border-box;border-radius:999px;background:#fff;color:#172554;font-weight:700;font-size:16px;transition:background .2s" style-hover="background:#F5F5F4;color:#172554"><span style="display:block;height:20px;overflow:hidden"><span style="display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.7,0,.2,1);transform:{{ h.cq.t }}"><span style="height:20px;display:flex;align-items:center;gap:8px">Get a Free Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span><span style="height:20px;display:flex;align-items:center;gap:8px">Get a Free Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span></span></span></a>
+<a href="tel:4695550123" onMouseEnter="{{ h.cc.on }}" onMouseLeave="{{ h.cc.off }}" style="display:inline-flex;align-items:center;justify-content:center;min-width:220px;height:56px;padding:0 32px;box-sizing:border-box;border-radius:999px;border:2px solid rgba(255,255,255,.3);color:#fff;font-weight:500;font-size:16px;transition:background .2s" style-hover="background:rgba(255,255,255,.1);color:#fff"><span style="display:block;height:20px;overflow:hidden"><span style="display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.7,0,.2,1);transform:{{ h.cc.t }}"><span style="height:20px;display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call (469) 555-0123</span><span style="height:20px;display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call (469) 555-0123</span></span></span></a>
+</div>
+</div>
+</section>
+<section id="about" style="scroll-margin-top:88px;background:#F8F7F4;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1917">
+<div style="max-width:1280px;margin:0 auto;padding:80px clamp(16px,3vw,32px)">
+<div style="display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;margin-bottom:48px">
+<span style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#1E3A8A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>About Our Founder</span>
+<h2 data-reveal="text" style="margin:0;max-width:760px;font-size:clamp(36px,4.4vw,60px);line-height:1.04;letter-spacing:-0.04em;font-weight:800;color:#1C1917;text-wrap:balance"><span data-w="1" style="display:inline-block">Built</span> <span data-w="1" style="display:inline-block">on</span> <span data-w="1" style="display:inline-block">discipline,</span><br><span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.12em;color:#1E3A8A"><span data-w="1" style="display:inline-block">driven</span> <span data-w="1" style="display:inline-block">by</span> <span data-w="1" style="display:inline-block">excellence.</span></span></h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px;align-items:stretch;padding:clamp(16px,2vw,24px);background:#fff;border:1px solid rgba(231,229,228,.7);border-radius:2.5rem;box-shadow:0 1px 2px rgba(15,30,61,.05)">
+<div style="position:relative;min-height:420px;border-radius:16px;overflow:hidden;background:#E6E9EF">
+<img data-reveal="scale" src="assets/founder.png" alt="Marvin Johnson, founder of MNNJ Exterior Property Care" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center"></img>
+<span style="position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(15,23,42,.88);backdrop-filter:blur(8px);color:#fff;font-size:13px;font-weight:700"><svg width="14" height="14" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>English Professional Footballer | Winger &amp; Wing-back</span>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(32px,4vw,48px);background:#F8F7F4;border:1px solid rgba(231,229,228,.5);border-radius:16px">
+<div>
+<p style="margin:0;font-size:clamp(20px,1.9vw,26px);line-height:1.6;font-weight:500;color:#1C1917;text-wrap:pretty">“Playing professional football as a winger and wing-back taught me that success comes down to <span style="color:#1E3A8A;font-weight:700">pace, precision, discipline</span>, and attention to detail. At MNNJ Exterior Property Care, we bring that exact <span style="color:#1E3A8A;font-weight:700">professional athlete mindset</span> to every home—ensuring your property is looked after like it's our own.”</p>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid #E7E5E4">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;font-weight:700;color:#1C1917">Marvin Nicholas Johnson</span><span style="font-size:14px;color:#78716C">Founder &amp; CEO, MNNJ Exterior Property Care | Professional Footballer</span></div>
+<span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:30px;color:#1E3A8A;user-select:none;line-height:1">Marvin Johnson</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="testimonials" style="scroll-margin-top:88px;background:#0F172A;border-radius:4rem 4rem 0 0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1917;padding-top:clamp(96px,9vw,128px)">
+<div style="display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;padding:0 16px">
+<span style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#BFDBFE"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Testimonials</span>
+<h2 data-reveal="text" style="margin:0;max-width:820px;font-size:clamp(36px,4.6vw,64px);line-height:1.05;letter-spacing:-0.04em;font-weight:800;color:#fff;text-wrap:balance"><span data-w="1" style="display:inline-block">Real</span> <span data-w="1" style="display:inline-block">results</span> <span data-w="1" style="display:inline-block">happy</span> <span data-w="1" style="display:inline-block">homeowners</span><br><span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.12em;color:#93C5FD"><span data-w="1" style="display:inline-block">always</span></span></h2>
+</div>
+<div data-reveal-stagger="1" style="max-width:1280px;margin:0 auto;padding:48px clamp(16px,3vw,32px) 96px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:24px">
+<div style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px;background:#fff;border:1px solid rgba(231,229,228,.8);border-radius:24px;box-shadow:0 1px 2px rgba(15,30,61,.05);transition:box-shadow .3s" style-hover="box-shadow:0 10px 30px rgba(15,30,61,.1)">
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;align-items:center;gap:12px"><img src="https://i.pravatar.cc/96?img=44" alt="" style="width:48px;height:48px;border-radius:999px;object-fit:cover"></img><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:700;color:#1C1917">Eleanor Pena</span><span style="font-size:14px;color:#78716C">Homeowner in Sheffield</span></div></div>
+<p style="margin:0;font-size:16px;line-height:1.65;color:#44403C;text-wrap:pretty">“The MNNJ Exterior team exceeded our expectations by completely restoring our roof and gutters with zero hassle.”</p>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid #F0EEEA"><div style="display:flex;gap:4px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><svg width="22" height="22" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"></path><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"></path><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"></path><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"></path></svg></div>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px;background:#fff;border:1px solid rgba(231,229,228,.8);border-radius:24px;box-shadow:0 1px 2px rgba(15,30,61,.05);transition:box-shadow .3s" style-hover="box-shadow:0 10px 30px rgba(15,30,61,.1)">
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;align-items:center;gap:12px"><img src="https://i.pravatar.cc/96?img=13" alt="" style="width:48px;height:48px;border-radius:999px;object-fit:cover"></img><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:700;color:#1C1917">Jerome Bell</span><span style="font-size:14px;color:#78716C">Property Manager</span></div></div>
+<p style="margin:0;font-size:16px;line-height:1.65;color:#44403C;text-wrap:pretty">“Our windows and cladding look brand new. Their friendly crew delivered exceptional quality and stayed strictly on schedule.”</p>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid #F0EEEA"><div style="display:flex;gap:4px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><svg width="22" height="22" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"></path><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"></path><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"></path><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"></path></svg></div>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px;background:#fff;border:1px solid rgba(231,229,228,.8);border-radius:24px;box-shadow:0 1px 2px rgba(15,30,61,.05);transition:box-shadow .3s" style-hover="box-shadow:0 10px 30px rgba(15,30,61,.1)">
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;align-items:center;gap:12px"><img src="https://i.pravatar.cc/96?img=53" alt="" style="width:48px;height:48px;border-radius:999px;object-fit:cover"></img><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:700;color:#1C1917">Guy Hawkins</span><span style="font-size:14px;color:#78716C">Homeowner in Rotherham</span></div></div>
+<p style="margin:0;font-size:16px;line-height:1.65;color:#44403C;text-wrap:pretty">“Outstanding craftsmanship on our driveway pressure washing. Every detail exceeded expectations!”</p>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid #F0EEEA"><div style="display:flex;gap:4px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><svg width="22" height="22" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"></path><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"></path><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"></path><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"></path></svg></div>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px;background:#fff;border:1px solid rgba(231,229,228,.8);border-radius:24px;box-shadow:0 1px 2px rgba(15,30,61,.05);transition:box-shadow .3s" style-hover="box-shadow:0 10px 30px rgba(15,30,61,.1)">
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;align-items:center;gap:12px"><img src="https://i.pravatar.cc/96?img=59" alt="" style="width:48px;height:48px;border-radius:999px;object-fit:cover"></img><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:700;color:#1C1917">Darrell Steward</span><span style="font-size:14px;color:#78716C">Business Owner</span></div></div>
+<p style="margin:0;font-size:16px;line-height:1.65;color:#44403C;text-wrap:pretty">“We loved working with MNNJ Exterior. Clear communication, fair pricing, and remarkable results.”</p>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid #F0EEEA"><div style="display:flex;gap:4px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><svg width="22" height="22" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"></path><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"></path><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"></path><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"></path></svg></div>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px;background:#fff;border:1px solid rgba(231,229,228,.8);border-radius:24px;box-shadow:0 1px 2px rgba(15,30,61,.05);transition:box-shadow .3s" style-hover="box-shadow:0 10px 30px rgba(15,30,61,.1)">
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;align-items:center;gap:12px"><img src="https://i.pravatar.cc/96?img=45" alt="" style="width:48px;height:48px;border-radius:999px;object-fit:cover"></img><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:700;color:#1C1917">Sarah Mitchell</span><span style="font-size:14px;color:#78716C">Homeowner in Doncaster</span></div></div>
+<p style="margin:0;font-size:16px;line-height:1.65;color:#44403C;text-wrap:pretty">“Prompt, professional, and thorough. They made cleaning our solar panels and gutters effortless.”</p>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid #F0EEEA"><div style="display:flex;gap:4px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><svg width="22" height="22" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"></path><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"></path><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"></path><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"></path></svg></div>
+</div>
+<div style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:24px;background:#fff;border:1px solid rgba(231,229,228,.8);border-radius:24px;box-shadow:0 1px 2px rgba(15,30,61,.05);transition:box-shadow .3s" style-hover="box-shadow:0 10px 30px rgba(15,30,61,.1)">
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;align-items:center;gap:12px"><img src="https://i.pravatar.cc/96?img=60" alt="" style="width:48px;height:48px;border-radius:999px;object-fit:cover"></img><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:700;color:#1C1917">David Miller</span><span style="font-size:14px;color:#78716C">Homeowner in Barnsley</span></div></div>
+<p style="margin:0;font-size:16px;line-height:1.65;color:#44403C;text-wrap:pretty">“Marvin's team brings professional athlete discipline to their work. Truly the best exterior cleaning service in town.”</p>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid #F0EEEA"><div style="display:flex;gap:4px"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="1.5" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><svg width="22" height="22" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"></path><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"></path><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"></path><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"></path></svg></div>
+</div>
+</div>
+</section>
+<section id="contact" style="scroll-margin-top:88px;background:#F8F7F4;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1917">
+<div style="max-width:1280px;margin:0 auto;padding:96px clamp(16px,3vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:64px;align-items:start">
+<div style="display:flex;flex-direction:column">
+<span style="display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1E3A8A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Get in Touch</span>
+<h2 data-reveal="text" style="margin:0;font-size:clamp(36px,4.6vw,64px);line-height:1.05;letter-spacing:-0.04em;font-weight:800;color:#1C1917;text-wrap:balance"><span data-w="1" style="display:inline-block">Let's</span> <span data-w="1" style="display:inline-block">discuss</span> <span data-w="1" style="display:inline-block">your</span><br><span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:1.12em;color:#1E3A8A"><span data-w="1" style="display:inline-block">next</span> <span data-w="1" style="display:inline-block">project.</span></span></h2>
+<p style="margin:24px 0 48px;max-width:520px;font-size:18px;line-height:1.6;color:#57534E;text-wrap:pretty">Ready to restore your property's curb appeal? Fill out the form or reach out directly for a free, no-obligation quote.</p>
+<div data-reveal-stagger="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:28px 24px">
+<div style="display:flex;align-items:flex-start;gap:14px"><span style="flex:none;width:44px;height:44px;border-radius:999px;background:#E8EDF7;color:#1E3A8A;display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span><div style="display:flex;flex-direction:column;gap:2px;padding-top:2px"><span style="font-size:13px;font-weight:600;color:#78716C">Phone</span><a href="tel:4695550123" style="font-size:16px;font-weight:700;color:#1C1917" style-hover="color:#1E3A8A">(469) 555-0123</a></div></div>
+<div style="display:flex;align-items:flex-start;gap:14px"><span style="flex:none;width:44px;height:44px;border-radius:999px;background:#E8EDF7;color:#1E3A8A;display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span><div style="display:flex;flex-direction:column;gap:2px;padding-top:2px"><span style="font-size:13px;font-weight:600;color:#78716C">Email</span><a href="mailto:quotes@mnnjexterior.com" style="font-size:16px;font-weight:700;color:#1C1917" style-hover="color:#1E3A8A">quotes@mnnjexterior.com</a></div></div>
+<div style="display:flex;align-items:flex-start;gap:14px"><span style="flex:none;width:44px;height:44px;border-radius:999px;background:#E8EDF7;color:#1E3A8A;display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span><div style="display:flex;flex-direction:column;gap:2px;padding-top:2px"><span style="font-size:13px;font-weight:600;color:#78716C">Location</span><span style="font-size:16px;font-weight:700;color:#1C1917">Sheffield, UK (Serving South Yorkshire)</span></div></div>
+<div style="display:flex;align-items:flex-start;gap:14px"><span style="flex:none;width:44px;height:44px;border-radius:999px;background:#E8EDF7;color:#1E3A8A;display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><div style="display:flex;flex-direction:column;gap:2px;padding-top:2px"><span style="font-size:13px;font-weight:600;color:#78716C">Hours</span><span style="font-size:16px;font-weight:700;color:#1C1917">Mon-Sat, 8:00 AM - 6:00 PM</span></div></div>
+</div>
+</div>
+<form data-reveal="up" data-reveal-delay="0.15" onSubmit="{{ bk.submit }}" style="display:flex;flex-direction:column;gap:20px;background:#fff;padding:clamp(32px,4vw,40px);border-radius:2rem;border:1px solid rgba(231,229,228,.8);box-shadow:0 10px 30px rgba(231,229,228,.4)">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px"><label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:14px;font-weight:600;color:#57534E">First Name</span><input type="text" placeholder="Enter your first name" autocomplete="given-name" required style="width:100%;box-sizing:border-box;background:#F8F7F4;border:1px solid #E7E5E4;border-radius:12px;padding:16px;font:inherit;font-size:15px;color:#292524;outline:none;transition:box-shadow .2s,border-color .2s" style-focus="box-shadow:0 0 0 2px rgba(30,58,138,.2);border-color:#C7D2FE"></input></label><label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:14px;font-weight:600;color:#57534E">Last Name</span><input type="text" placeholder="Enter your last name" autocomplete="family-name" required style="width:100%;box-sizing:border-box;background:#F8F7F4;border:1px solid #E7E5E4;border-radius:12px;padding:16px;font:inherit;font-size:15px;color:#292524;outline:none;transition:box-shadow .2s,border-color .2s" style-focus="box-shadow:0 0 0 2px rgba(30,58,138,.2);border-color:#C7D2FE"></input></label></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px"><label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:14px;font-weight:600;color:#57534E">Email Address</span><input type="email" placeholder="Enter your email address" autocomplete="email" required style="width:100%;box-sizing:border-box;background:#F8F7F4;border:1px solid #E7E5E4;border-radius:12px;padding:16px;font:inherit;font-size:15px;color:#292524;outline:none;transition:box-shadow .2s,border-color .2s" style-focus="box-shadow:0 0 0 2px rgba(30,58,138,.2);border-color:#C7D2FE"></input></label><label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:14px;font-weight:600;color:#57534E">Phone Number</span><input type="tel" placeholder="Enter your phone number" autocomplete="tel" required style="width:100%;box-sizing:border-box;background:#F8F7F4;border:1px solid #E7E5E4;border-radius:12px;padding:16px;font:inherit;font-size:15px;color:#292524;outline:none;transition:box-shadow .2s,border-color .2s" style-focus="box-shadow:0 0 0 2px rgba(30,58,138,.2);border-color:#C7D2FE"></input></label></div>
+<sc-for list="{{ bk.dd }}" as="d" hint-placeholder-count="1">
+<div data-dd="1" style="display:flex;flex-direction:column;gap:8px;position:relative;z-index:{{ d.z }}">
+<span style="font-size:14px;font-weight:600;color:#57534E">{{ d.label }}</span>
+<button type="button" onClick="{{ d.toggle }}" aria-haspopup="listbox" aria-expanded="{{ d.open }}" style="display:flex;justify-content:space-between;align-items:center;width:100%;padding:16px;background:#F8F7F4;border:1px solid {{ d.border }};box-shadow:{{ d.ring }};border-radius:12px;font:inherit;font-size:15px;color:{{ d.valColor }};cursor:pointer;text-align:left;transition:border-color .2s,box-shadow .2s" style-hover="border-color:rgba(30,58,138,.4)">
+<span>{{ d.value }}</span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C1917" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .2s;transform:{{ d.chev }}"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<sc-if value="{{ d.open }}" hint-placeholder-val="{{ false }}">
+<div role="listbox" style="position:absolute;top:100%;left:0;right:0;margin-top:8px;z-index:50;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);border:1px solid rgba(231,229,228,.8);border-radius:16px;box-shadow:0 20px 40px rgba(15,30,61,.14);overflow:hidden;padding:6px 0;animation:ddIn .2s ease-out">
+<sc-for list="{{ d.opts }}" as="o" hint-placeholder-count="3">
+<sc-if value="{{ o.sel }}" hint-placeholder-val="{{ false }}"><div role="option" aria-selected="true" onClick="{{ o.pick }}" style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:space-between;background:#1E3A8A;color:#fff" style-hover="background:#1E40AF">{{ o.label }}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></div></sc-if>
+<sc-if value="{{ o.un }}" hint-placeholder-val="{{ true }}"><div role="option" aria-selected="false" onClick="{{ o.pick }}" style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:500;display:flex;align-items:center;justify-content:space-between;color:#292524;transition:background .15s" style-hover="background:rgba(239,246,255,.8);color:#1E3A8A">{{ o.label }}</div></sc-if>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</sc-for>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;font-weight:600;color:#57534E">Property Details / Message</span><textarea rows="4" placeholder="Tell us about your property and what needs cleaning…" style="width:100%;box-sizing:border-box;background:#F8F7F4;border:1px solid #E7E5E4;border-radius:12px;padding:16px;font:inherit;font-size:15px;color:#292524;outline:none;transition:box-shadow .2s,border-color .2s;resize:vertical" style-focus="box-shadow:0 0 0 2px rgba(30,58,138,.2);border-color:#C7D2FE"></textarea></label>
+<button type="submit" onMouseEnter="{{ h.rq.on }}" onMouseLeave="{{ h.rq.off }}" style="margin-top:16px;width:100%;height:60px;border:0;border-radius:999px;background:#1E3A8A;color:#fff;font:inherit;font-size:18px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s" style-hover="background:#1E40AF"><span style="display:block;height:24px;overflow:hidden"><span style="display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.7,0,.2,1);transform:{{ h.rq.t }}"><span style="height:24px;display:flex;align-items:center;gap:8px">Request Free Quote<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span><span style="height:24px;display:flex;align-items:center;gap:8px">Request Free Quote<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span></span></span></button>
+<sc-if value="{{ bk.sent }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font-size:14px;font-weight:600;color:#1E3A8A;text-align:center">Thanks — we'll be in touch within one business day with your free quote.</p></sc-if>
+</form>
+</div>
+</section>
+<footer style="position:relative;overflow:hidden;background:#0F172A;border-radius:3rem 3rem 0 0;font-family:'Plus Jakarta Sans',system-ui,sans-serif">
+<div aria-hidden="true" style="position:absolute;bottom:0;left:0;width:100%;overflow:hidden;display:flex;justify-content:center;align-items:flex-end;pointer-events:none;user-select:none;opacity:.05"><span data-reveal="drift" style="font-size:clamp(12rem,24vw,20rem);font-weight:800;color:#fff;line-height:.8;letter-spacing:-0.05em">MNNJ</span></div>
+<div style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:96px clamp(16px,3vw,32px) 32px">
+<div data-reveal-stagger="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:48px;margin-bottom:64px">
+<div style="grid-column:span 2;display:flex;flex-direction:column;min-width:min(100%,280px)">
+<img src="assets/logo-light.png" alt="MNNJ Exterior Property Care" style="height:clamp(48px,5vw,64px);width:auto;object-fit:contain;align-self:flex-start;margin-bottom:24px"></img>
+<p style="margin:0;max-width:320px;font-size:14px;line-height:1.7;color:rgba(219,234,254,.7)">Delivering athlete-level discipline and precision to exterior property care. Creating spotless, beautiful properties for every homeowner, every season.</p>
+</div>
+<div style="grid-column:span 1;display:flex;flex-direction:column"><h3 style="margin:0 0 24px;font-size:16px;font-weight:600;color:#fff">Discover</h3><div style="display:flex;flex-direction:column;gap:16px"><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">Home</a><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">About our Founder</a><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">Services</a><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">Testimonials</a><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">Get a Quote</a></div></div>
+<div style="grid-column:span 1;display:flex;flex-direction:column"><h3 style="margin:0 0 24px;font-size:16px;font-weight:600;color:#fff">Services</h3><div style="display:flex;flex-direction:column;gap:16px"><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">Roof cleaning</a><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">Window cleaning</a><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">Gutter flushing</a><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">Driveway washing</a><a href="#" style="font-size:14px;color:rgba(219,234,254,.7);transition:color .2s" style-hover="color:#fff">Solar panel care</a></div></div>
+<div style="grid-column:span 2;display:flex;flex-direction:column"><h3 style="margin:0 0 24px;font-size:16px;font-weight:600;color:#fff">Contact us</h3><div style="display:flex;flex-direction:column;gap:16px"><a href="mailto:quotes@mnnjexterior.com" style="font-size:14px;color:rgba(219,234,254,.7)" style-hover="color:#fff">quotes@mnnjexterior.com</a><a href="tel:4695550123" style="font-size:14px;color:rgba(219,234,254,.7)" style-hover="color:#fff">(469) 555-0123</a><span style="font-size:14px;color:rgba(219,234,254,.7)">Sheffield, South Yorkshire, UK</span></div></div>
+</div>
+<hr style="border:0;border-top:1px solid rgba(255,255,255,.1);margin:0 0 32px"></hr>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:14px;color:rgba(219,234,254,.5)">
+<span>© 2026 MNNJ Exterior Property Care. All rights reserved.</span>
+<div style="display:flex;gap:24px"><a href="#" aria-label="Twitter" style="display:flex;color:rgba(219,234,254,.5);transition:color .2s" style-hover="color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a><a href="#" aria-label="Instagram" style="display:flex;color:rgba(219,234,254,.5);transition:color .2s" style-hover="color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a><a href="#" aria-label="LinkedIn" style="display:flex;color:rgba(219,234,254,.5);transition:color .2s" style-hover="color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="#" aria-label="Facebook" style="display:flex;color:rgba(219,234,254,.5);transition:color .2s" style-hover="color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></div>
+</div>
+</div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const SERVICES = [
+  ['Roof Cleaning', 'Soft-wash removal of moss, algae and lichen that restores your roof without damaging tiles.', '$350', 'photo-1632759145351-1d592919f522'],
+  ['Window Cleaning', 'Streak-free, pure-water cleaning for frames, sills and glass — inside and out.', '$95', 'photo-1581578731548-c64695cc6952'],
+  ['Gutter Cleaning', 'Full clear-out of leaves and debris, with downpipe flushing to prevent leaks and overflow.', '$140', 'photo-1600585154340-be6161a56a0c'],
+  ['Moss/Weed Removal', 'Targeted treatment that lifts moss and weeds from paths and joints, and keeps them away.', '$120', 'photo-1558904541-efa843a96f01'],
+  ['Cladding Cleaning', 'Gentle low-pressure wash that brings uPVC, timber and composite cladding back to life.', '$220', 'photo-1564013799919-ab600027ffc6'],
+  ['Driveway & Patio Cleaning', 'Deep pressure cleaning and re-sanding for block paving, concrete and natural stone.', '$180', 'photo-1600566753190-17f0baa2a6c3'],
+  ['Solar Panel Cleaning', 'Deionised-water cleaning that removes grime and bird mess to recover lost efficiency.', '$150', 'photo-1509391366360-2e959784a276'],
+  ['Cherry Picker Hire', 'Operated access platform for high or hard-to-reach jobs, with a trained, insured operator.', '$450', 'photo-1504307651254-35680f356dfd'],
+];
+const DROPDOWNS = [
+  ['service', 'Service Required', ['Exterior Wash', 'Roof Cleaning', 'Window Cleaning', 'Gutter Cleaning', 'Driveway & Patio', 'Other']],
+];
+class Component extends DCLogic {
+  componentDidMount() {
+    this._out = e => { if (this.state.dd && !e.target.closest('[data-dd]')) this.setState({ dd: null }); };
+    this._esc = e => { if (e.key === 'Escape' && this.state.dd) this.setState({ dd: null }); };
+    document.addEventListener('mousedown', this._out);
+    document.addEventListener('keydown', this._esc);
+    this.setupReveal();
+    this._scroll = () => { const s = window.scrollY > 20; if (s !== !!this.state.scrolled) this.setState({ scrolled: s }); };
+    this._scroll();
+    window.addEventListener('scroll', this._scroll, { passive: true });
+  }
+  setupReveal() {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const items = [];
+    const add = (el, kind, delay) => { if (el && !el.__rv) { el.__rv = 1; items.push([el, kind, delay]); } };
+    document.querySelectorAll('[data-reveal="text"]').forEach(hd => {
+      const p = hd.previousElementSibling, n = hd.nextElementSibling;
+      if (p && (p.tagName === 'SPAN' || (p.tagName === 'DIV' && p.childElementCount === 1))) add(p, 'up', 0);
+      const words = hd.querySelectorAll('[data-w]');
+      words.forEach((w, i) => add(w, 'word', 0.1 + 0.08 * i));
+      if (n && n.tagName === 'P') add(n, 'up', 0.15 + 0.08 * words.length);
+    });
+    document.querySelectorAll('[data-reveal-stagger]').forEach(g => {
+      let i = 0;
+      [...g.children].forEach(c => { if (!c.querySelector('h2')) add(c, 'card', 0.15 * i++); });
+    });
+    document.querySelectorAll('form[data-reveal]').forEach(f => { f.removeAttribute('data-reveal'); [...f.children].forEach((c, i) => add(c, 'card', 0.15 * i)); });
+    document.querySelectorAll('[data-reveal="scale"]').forEach(el => add(el, 'scale', 0));
+    ['up', 'pop', 'nav', 'drift'].forEach(k => document.querySelectorAll(`[data-reveal="${k}"]`).forEach(el => add(el, k, +(el.dataset.revealDelay || 0))));
+    // spring-like curves (overshoot) approximating framer-motion springs
+    const SPRING = 'cubic-bezier(.22,1.25,.36,1)', POP = 'cubic-bezier(.34,1.6,.64,1)', SOFT = 'cubic-bezier(.16,1,.3,1)';
+    const K = {
+      up:    { from: 'translateY(30px)', dur: .9, ease: SPRING },
+      word:  { from: 'translateY(30px)', dur: .75, ease: SPRING },
+      card:  { from: 'translateY(60px)', dur: 1, ease: SPRING },
+      scale: { from: 'translateY(40px) scale(1.1)', dur: 1.3, ease: SOFT },
+      pop:   { from: 'scale(.8)', dur: .7, ease: POP },
+      nav:   { from: 'translateY(-100px)', dur: .9, ease: SPRING, noFade: true },
+      drift: { from: 'translateY(140px)', dur: 2, ease: SOFT },
+    };
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target; io.unobserve(el);
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      setTimeout(() => { el.style.transition = el.__rvOrig; el.style.transform = ''; }, el.__rvMs);
+    }), { rootMargin: '0px 0px -100px 0px' });
+    const vh = window.innerHeight;
+    const reveal = el => {
+      el.style.opacity = '1'; el.style.transform = 'none';
+      setTimeout(() => { el.style.transition = el.__rvOrig; el.style.transform = ''; }, el.__rvMs);
+    };
+    const now = [];
+    items.forEach(([el, kind, d]) => {
+      const k = K[kind];
+      // anything already on screen at load (navbar, hero) reveals immediately instead of via the observer
+      const r = el.getBoundingClientRect();
+      const onLoad = kind === 'nav' || (r.top < vh && r.bottom > 0);
+      el.__rvOrig = el.style.transition; el.__rvMs = (k.dur + d) * 1000 + 80;
+      if (!k.noFade) el.style.opacity = '0';
+      el.style.transform = k.from;
+      el.style.transition = `opacity ${Math.min(k.dur, .6)}s ease-out ${d}s, transform ${k.dur}s ${k.ease} ${d}s` + (el.__rvOrig ? ', ' + el.__rvOrig : '');
+      if (onLoad) now.push(el); else io.observe(el);
+    });
+    if (now.length) requestAnimationFrame(() => requestAnimationFrame(() => now.forEach(reveal)));
+    this._io = io;
+  }
+  componentWillUnmount() {
+    this._io && this._io.disconnect();
+    window.removeEventListener('scroll', this._scroll);
+    document.removeEventListener('mousedown', this._out);
+    document.removeEventListener('keydown', this._esc);
+  }
+  state = { hov: null, svc: null };
+  renderVals() {
+    const h = {};
+    const pos = this.state.pos ?? 50;
+    const ba = { pos, clip: `polygon(0 0, ${pos}% 0, ${pos}% 100%, 0 100%)`, left: `${pos}%`, set: e => this.setState({ pos: Number(e.target.value) }) };
+    const st = this.state;
+    const bk = {
+      dd: DROPDOWNS.map(([key, label, options]) => {
+        const value = st[key], open = st.dd === key;
+        return {
+          label, value: value ?? 'Select a service', hasVal: !!value, open, z: open ? 60 : 2,
+          valColor: value ? '#1C1917' : '#A8A29E',
+          border: open ? 'rgba(30,58,138,.5)' : '#E7E5E4', ring: open ? '0 0 0 2px rgba(30,58,138,.2)' : 'none', chev: open ? 'rotate(180deg)' : 'rotate(0deg)',
+          toggle: () => this.setState({ dd: open ? null : key }),
+          opts: options.map(o => ({ label: o, sel: o === value, un: o !== value, pick: () => this.setState({ [key]: o, dd: null, sent: false }) })),
+        };
+      }),
+      sent: !!st.sent, submit: e => { e.preventDefault(); this.setState({ sent: true }); },
+    };
+    ['nav', 'cta', 'phone', 'ba', 'cq', 'cc', 'rq'].forEach(k => {
+      h[k] = {
+        t: this.state.hov === k ? (k === 'rq' ? 'translateY(-24px)' : 'translateY(-20px)') : 'translateY(0)',
+        on: () => this.setState({ hov: k }),
+        off: () => this.setState({ hov: null }),
+      };
+    });
+    const items = SERVICES.map(([title, desc, price, id], i) => {
+      const on = this.state.svc === i;
+      return {
+        title, desc, price, bg: `url(https://images.unsplash.com/${id}?auto=format&fit=crop&w=800&q=75)`,
+        imgT: on ? 'scale(1.1) rotate(2deg)' : 'scale(1) rotate(0deg)',
+        a1: on ? 'translate(100%,-100%)' : 'translate(0,0)',
+        a2: on ? 'translate(0,0)' : 'translate(-100%,100%)',
+        on: () => this.setState({ svc: i }),
+        off: () => this.setState({ svc: null }),
+      };
+    });
+    const sc = !!this.state.scrolled;
+    const nb = sc
+      ? { top: '0px', side: '0px', radius: '0px', shadow: '0 1px 2px rgba(15,30,61,.06)', border: '1px solid rgba(231,229,228,.5)',
+          bg: 'rgba(248,247,244,.95)', blur: 'blur(12px)', link: '#57534E', linkHover: '#1E3A8A', lightOp: 0, darkOp: 1 }
+      : { top: '16px', side: 'clamp(16px,2.5vw,32px)', radius: '16px', shadow: 'none', border: '1px solid transparent',
+          bg: 'transparent', blur: 'none', link: 'rgba(255,255,255,.9)', linkHover: '#fff', lightOp: 1, darkOp: 0 };
+    return { h, items, ba, bk, nb };
+  }
+}
+</script>
+</body>
+</html>
