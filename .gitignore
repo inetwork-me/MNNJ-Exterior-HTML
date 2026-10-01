@@ -1,0 +1,8 @@
+# Design-tool scratch files (not used by the site)
+uploads/
+.thumbnail
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
